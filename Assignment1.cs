@@ -168,17 +168,19 @@ namespace _02UnderstandingTypes
 
         public void Greeting()
         {
+            //String timeNow = DateTime.Now.ToString("t", CultureInfo.CreateSpecificCulture("es-ES"));
             DateTime current = DateTime.Now;
             byte hour = byte.Parse(current.Hour.ToString());
-            if ((hour > 21) && (hour <= 6))
-                Console.WriteLine("Good night");
+            //int hour = 7;
+            //if (6 < hour < 12)
             if ((hour > 6) && (hour <= 12))
                 Console.WriteLine("Good morning");
             if ((hour > 12) && (hour <= 18))
                 Console.WriteLine("Good afternoon");
             if ((hour > 18) && (hour <= 21))
-            //if (18 < hour <= 20)
                 Console.WriteLine("Good evening");
+            if ((hour > 21) || (hour <= 6))
+                Console.WriteLine("Good night");
         }
     }   
 }
