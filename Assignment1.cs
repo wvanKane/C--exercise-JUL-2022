@@ -13,26 +13,22 @@ namespace _02UnderstandingTypes
         {
             //please fill a number between 0 to 255
             //int max = 10; 
-            for (byte hour = 0; hour < 24; hour++)
+            //for (byte hour = 0; hour < 24; hour++)
+            //{
+
+
+            for (int i = 1; i < 5; i++)
             {
-
-            //String timeNow = DateTime.Now.ToString("t", CultureInfo.CreateSpecificCulture("es-ES"));
-            //DateTime current = DateTime.Now;
-            //byte hour = byte.Parse(current.Hour.ToString());
-            //int hour = 7;
-            //if (6 < hour < 12)
-            if ((hour > 6) && (hour <= 12))
-                Console.WriteLine("Good morning");
-            if ((hour > 12) && (hour <= 18))
-                Console.WriteLine("Good afternoon");
-            if ((hour > 18) && (hour <= 21))
-                Console.WriteLine("Good evening");
-            if ((hour > 21) || (hour <= 6))
-                Console.WriteLine("Good night");
-
-
+                for (int j = 0; j <= 24; j += i)
+                {
+                    Console.Write(j + " ");
+                }
+                Console.WriteLine(" ");
             }
         }
+
+                    //}
+                
 
         //private static void WriteLine(byte i)
         //{
@@ -181,6 +177,19 @@ namespace _02UnderstandingTypes
                 Console.WriteLine("Good evening");
             if ((hour > 21) || (hour <= 6))
                 Console.WriteLine("Good night");
+        }
+
+        public void Count24()
+        {
+            for (int i = 1; i < 5; i++)
+            {
+                for (int j = 0; j <= 24; j += i)
+                {
+                    Console.Write(j + " ");
+                }
+                Console.WriteLine(" ");
+            }
+
         }
     }   
 }
