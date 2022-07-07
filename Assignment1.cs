@@ -11,8 +11,46 @@ namespace _02UnderstandingTypes
     {
         static public void Main()
         {
-            Assignment1 assignment1 = new Assignment1();
+            //please fill a number between 0 to 255
+            //int max = 10; 
+            //for (byte i = 0; i < max; i++)
+            //{
+                int randomNumber = new Random().Next(3) + 1;  // generates a random number between 1 and 3 
+
+                while (true)
+                {
+                    Console.WriteLine("Please enter a number: ");
+                    double input = Convert.ToDouble(Console.ReadLine());
+                    if (input == randomNumber)
+                    {
+                        Console.WriteLine("Corrent!! the number is " + randomNumber);
+                        return;
+                    }
+                    else if (input > randomNumber)
+                    {
+                        if (input > 3)
+                        {
+                            Console.WriteLine("Please enter number less than 3.");
+                        }
+                        Console.WriteLine("Your number is greater than corrent number");
+                    }
+                    else
+                    {
+                        if (input < 1)
+                        {
+                            Console.WriteLine("Please enter number greater than 1.");
+                        }
+                        Console.WriteLine("Your number is less than corrent number");
+                    }
+                }
+            //}
         }
+
+        //private static void WriteLine(byte i)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         public void NumCheck()
         {
             Console.WriteLine("The max of sbyte is " + sbyte.MaxValue + " and the min is " + sbyte.MinValue);
@@ -44,6 +82,70 @@ namespace _02UnderstandingTypes
                 $"{nanoseconds} nanoseconds");
         }
 
+        public void FizzBuzzGame()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine(i + " is a FizzBuzz word");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine(i + " is a Fizz word");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine(i + " is a Buzz word");
+                }
+                else
+                {
+                    Console.WriteLine(i + " ");
+                }
+            }
+        }
+
+        public void byteLimit()
+        {
+            //please fill a number between 0 to 255. Otherwise it will endless loop.
+            int max = 256;
+            for (byte i = 0; i < max; i++)
+            {
+                Console.WriteLine(i); 
+            }
+        }
+
+        public void GuessNumber()
+        {
+            int randomNumber = new Random().Next(3) + 1;  // generates a random number between 1 and 3 
+
+            while (true)
+            {
+                Console.WriteLine("Please enter an intger between 1 and 3: ");
+                double input = Convert.ToDouble(Console.ReadLine());
+                if (input == randomNumber)
+                {
+                    Console.WriteLine("Corrent!! the number is " + randomNumber);
+                    return;
+                }
+                else if (input > randomNumber)
+                {
+                    if (input > 3)
+                    {
+                        Console.WriteLine("Please enter number less than 3.");
+                    }
+                    Console.WriteLine("Your number is greater than corrent number");
+                }
+                else
+                {
+                    if (input < 1)
+                    {
+                        Console.WriteLine("Please enter number greater than 1.");
+                    }
+                    Console.WriteLine("Your number is less than corrent number");
+                }
+            }
+        }
     }   
 }
 
